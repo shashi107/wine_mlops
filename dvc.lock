@@ -16,3 +16,19 @@ stages:
     - path: data\raw\wine.csv
       md5: 13ee5bdf05810f41b3e810fa4e68023e
       size: 11659
+  split_data:
+    cmd: python src\split_data.py --config=params.yaml
+    deps:
+    - path: data\raw\wine.csv
+      md5: 13ee5bdf05810f41b3e810fa4e68023e
+      size: 11659
+    - path: src\split_data.py
+      md5: d0b79a27bd3db7325015bcec9ce3f589
+      size: 1099
+    outs:
+    - path: data\processed\test_wine.csv
+      md5: 65a5375c628c2993af8347ff9c44d282
+      size: 2438
+    - path: data\processed\train_wine.csv
+      md5: 38a9c8bf80c5b5addc201fefb0239319
+      size: 9330
