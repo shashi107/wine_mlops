@@ -11,6 +11,7 @@ load_data:
 
 split_data:
   train_path: data\processed\wine.csv
+  test_path: data\processed\wine.csv
   test_size: 0.2
 
 estimators:
